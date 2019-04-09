@@ -1,0 +1,11 @@
+<html>
+<body>
+  <h1>{{ title }} Yeah LIST!!!!</h1>
+  {% for obj in instance %}
+    <!--<a href='/posts/create/{{obj.id}}/'>{{ obj.title}}</a><\t>-->
+    <a href='{% url "create" id=obj.id %}'>{{obj.title}}</a>
+   {{ obj.updated}}
+   {{obj.content}}<br/>
+  {% endfor %}
+</body>
+</html>
